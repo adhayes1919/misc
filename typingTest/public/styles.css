@@ -1,0 +1,41 @@
+#typeHere { 
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+} 
+#typeHere:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow:0 0 5px rgba(0,123,255,0.5);
+}
+#display{
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    font-family: monospace;
+} 
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+.remaining {
+    color: blue;
+}
+#display span {
+    display: inline;
+}
+#mainContent {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+span { 
+    display: block;
+    margin-bottom: 5px;
+}

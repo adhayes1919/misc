@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>other page</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())  // Fetch menu content from 'menu.html'
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data); // Insert menu into the body
+            })
+            .catch(error => console.error('Error loading menu:', error)); // Catch and log errors
+    </script>
+
+    <!-- Main content of the page -->
+    <div id="mainContent">
+        <h1>Other content!</h1>
+        <p>placeholder</p>
+        <!-- Other page content goes here -->
+    </div>
+
+    <!-- Link to External JavaScript File -->
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other!</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+    <div id="mainContent">
+        <h1 id="greeting">Other things will go here!</h1>
+
+        <div id="authButtons"> </div>
+        
+
+        <style>
+
+        form {
+            margin-top: 50px;
+            padding: 20px;
+        }
+        </style>
+        <!--shortcut to auto close my html?-->
+        
+    </div>
+    <!-- Link to External JavaScript File -->
+    <!--other.js is a hodgepodge rn but should be delegated as needed eventually -->
+    <script src="js/account.js"></script>
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())  
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data); 
+            })
+            .catch(error => console.error('Error loading menu:', error)); 
+        
+    </script>
+
+</body>
+</html>
+

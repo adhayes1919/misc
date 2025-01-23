@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page!</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add other meta tags or external resources if needed -->
+</head>
+<body>
+
+    <!-- Dynamic Menu will be injected here -->
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())  // Fetch menu content from 'menu.html'
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data); // Insert menu into the body
+            })
+            .catch(error => console.error('Error loading menu:', error)); // Catch and log errors
+    </script>
+
+    <!-- Main content of the page -->
+    <div id="mainContent">
+        <h1>Welcome to Your Page</h1>
+        <p>This is the main content of the page.</p>
+        <!-- Other page content goes here -->
+    </div>
+
+    <!-- Link to External JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+        <form id="registerForm">
+            <span> Register to save scores </span>
+            <!--tf are labels for?-->
+            <!--can id and name repeat?-->
+            <label for="newUsername">Username: </label>
+            <input type="text" id="newUsername" name="newUsername" required />
+
+            <label for="newPassword">Password: </label>
+            <input type="password" id="newPassword" name="newPassword" required />
+            <label for="confirmPassword">Confirm password: </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required />
+            <button type="submit"> Register </button>
+        </form>
+        <style> 
+            #registerForm input[type="password"].default {
+                border: 1px solid grey;
+            } 
+            input[type="password"].invalid {
+                border-color: red;
+            } 
+            input[id="newUsername"].default {
+                border: 1px solid grey;
+            } 
+            input[id="newUsername"].invalid {
+                border-color: red;
+            }
+        </style>
+</body>
+</html>
+

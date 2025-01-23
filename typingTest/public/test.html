@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> type test </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body >
+        <!--move to separate CSS file eventually-->
+        <div id="mainContent" style="text-align: center;"> 
+            <span id="display"> Start a test! </span>
+            <div></div> <!--not at all sure if this is correct -->
+            <textarea id="typeHere" rows="5" cols="50" placeholder="type here. . ."> </textarea>
+            <button id="submit" type="button"> submit! </button>
+            <div> 
+                <span id="time"> typed in 0.0 seconds </span>
+                <span id="rawWPM"> raw: 0 </span>
+                <span id="adjustedWPM"> adjusted: 0 </span>
+                <span id="accuracy"> accuracy: 0 </span>
+                <button id="save"> save score </button>
+            </div>
+            <ol id="topScoresList">
+            </ol>
+
+        </div>
+    </body>
+
+
+    <!-- scripts -->
+    <script src=js/test.js> </script> 
+
+    <script> 
+        fetch('menu.html')
+            .then(response => response.text())
+                .then(data => {
+                    document.body.insertAdjacentHTML('afterbegin',data);})
+                .catch(error => console.error('Error loading menu:', error));
+    </script>
+    <!-- scripts -->
+</html>
